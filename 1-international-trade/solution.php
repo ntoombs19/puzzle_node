@@ -1,7 +1,7 @@
 <?php
 
-$rates = getXMLFile("RATES.xml");
-$transactions = getCSVFile("TRANS.csv");
+$rates = getXMLFile("data/RATES.xml");
+$transactions = getCSVFile("data/TRANS.csv");
 
 $solution = array();
 $output = "";

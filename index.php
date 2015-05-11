@@ -1,9 +1,21 @@
-<?php
-	$dir    = '.';
-	$files = array_diff(scandir($dir), array('..', '.', 'index.php'));
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="/resources/foundation/css/foundation.min.css">
+</head>
+<body>
+	<div class="row">
+		<div class="small-12 columns">
+			<?php
+			include("/Applications/MAMP/htdocs/test/resources/testHelper.php");
 
-	echo "<p><a href='..'>< Back</a></p><p></p>";
-	foreach($files as $file){
-		echo "<a href='{$file}'>{$file}</a><br/>";
-	}
-?>
+			$testHelper = new testHelper();
+			$testHelper->breadcrumbs(basename(__DIR__));
+			$testHelper->listFiles();
+			?>
+		</div>
+	</div>
+
+</body>
+</html>
